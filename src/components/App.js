@@ -54,6 +54,7 @@ class Timer extends React.Component {
         this.setState({
           startEvent: false,
         });
+        return;
       }
     }
   }
