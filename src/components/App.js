@@ -36,10 +36,10 @@ class Timer extends React.Component {
         });
         if (this.state.x === 250 && this.state.y === 250) {
           clearInterval(this.id);
-          // this.setState({
-          //   startEvent: false,
-          // });
-          document.removeEventListener("keydown", this.keyboardEvent);
+          this.setState({
+            startEvent: false,
+          });
+          // document.removeEventListener("keydown", this.keyboardEvent);
 
           return;
         }
@@ -49,10 +49,10 @@ class Timer extends React.Component {
         });
         if (this.state.x === 250 && this.state.y === 250) {
           clearInterval(this.id);
-          // this.setState({
-          //   startEvent: false,
-          // });
-          document.removeEventListener("keydown", this.keyboardEvent);
+          this.setState({
+            startEvent: false,
+          });
+          // document.removeEventListener("keydown", this.keyboardEvent);
 
           return;
         }
@@ -63,10 +63,10 @@ class Timer extends React.Component {
 
         if (this.state.x === 250 && this.state.y === 250) {
           clearInterval(this.id);
-          // this.setState({
-          //   startEvent: false,
-          // });
-          document.removeEventListener("keydown", this.keyboardEvent);
+          this.setState({
+            startEvent: false,
+          });
+          // document.removeEventListener("keydown", this.keyboardEvent);
 
           return;
         }
@@ -77,10 +77,10 @@ class Timer extends React.Component {
 
         if (this.state.x === 250 && this.state.y === 250) {
           clearInterval(this.id);
-          // this.setState({
-          //   startEvent: false,
-          // });
-          document.removeEventListener("keydown", this.keyboardEvent);
+          this.setState({
+            startEvent: false,
+          });
+          // document.removeEventListener("keydown", this.keyboardEvent);
 
           return;
         }
