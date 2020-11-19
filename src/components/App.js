@@ -34,28 +34,51 @@ class Timer extends React.Component {
         this.setState((prevState) => {
           return { x: prevState.x - 5, y: prevState.y };
         });
+        if (this.state.x === 250 && this.state.y === 250) {
+          clearInterval(this.id);
+          this.setState({
+            startEvent: false,
+          });
+          return;
+        }
       } else if (event.keyCode === 38) {
         this.setState((prevState) => {
           return { x: prevState.x, y: prevState.y - 5 };
         });
+        if (this.state.x === 250 && this.state.y === 250) {
+          clearInterval(this.id);
+          this.setState({
+            startEvent: false,
+          });
+          return;
+        }
       } else if (event.keyCode === 39) {
         this.setState((prevState) => {
           return { x: prevState.x + 5, y: prevState.y };
         });
+
+        if (this.state.x === 250 && this.state.y === 250) {
+          clearInterval(this.id);
+          this.setState({
+            startEvent: false,
+          });
+          return;
+        }
       } else if (event.keyCode === 40) {
         this.setState((prevState) => {
           return { x: prevState.x, y: prevState.y + 5 };
         });
+
+        if (this.state.x === 250 && this.state.y === 250) {
+          clearInterval(this.id);
+          this.setState({
+            startEvent: false,
+          });
+          return;
+        }
       }
       // this.tempX = this.state.x;
       // this.tempY = this.state.y;
-      if (this.state.x === 250 && this.state.y === 250) {
-        clearInterval(this.id);
-        this.setState({
-          startEvent: false,
-        });
-        return;
-      }
     }
   }
 
