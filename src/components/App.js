@@ -8,16 +8,6 @@ class Timer extends React.Component {
     this.handleClick = this.handleClick.bind(this);
   }
   componentDidMount() {
-    // this.id = setInterval(() => {
-    //   this.setState((state) => {
-    //     return { time: state.time + 1 };
-    //   });
-    // }, 1000);
-    // this.id = setInterval(() => {
-    //   this.setState((state) => {
-    //     return { time: state.time + 1 };
-    //   });
-    // }, 1000);
     document.addEventListener("keydown", this.keyboardEvent);
   }
   handleClick() {
@@ -66,7 +56,9 @@ class Timer extends React.Component {
     }
   }
 
-  componentWillUnmount() {}
+  componentWillUnmount() {
+    document.removeEventListener("keydown", this.keyboardEvent);
+  }
 
   render() {
     return (
@@ -74,7 +66,7 @@ class Timer extends React.Component {
         <div
           className="ball"
           style={{
-            position: "absolute",
+            position: "abosulte",
             left: this.state.x,
             top: this.state.y,
           }}
