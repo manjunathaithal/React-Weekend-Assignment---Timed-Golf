@@ -39,7 +39,6 @@ class Timer extends React.Component {
           this.setState({
             startEvent: false,
           });
-          // document.removeEventListener("keydown", this.keyboardEvent);
 
           return;
         }
@@ -52,7 +51,6 @@ class Timer extends React.Component {
           this.setState({
             startEvent: false,
           });
-          // document.removeEventListener("keydown", this.keyboardEvent);
 
           return;
         }
@@ -66,7 +64,6 @@ class Timer extends React.Component {
           this.setState({
             startEvent: false,
           });
-          // document.removeEventListener("keydown", this.keyboardEvent);
 
           return;
         }
@@ -80,7 +77,6 @@ class Timer extends React.Component {
           this.setState({
             startEvent: false,
           });
-          // document.removeEventListener("keydown", this.keyboardEvent);
 
           return;
         }
