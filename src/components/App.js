@@ -29,12 +29,17 @@ class Timer extends React.Component {
   // }
 
   keyboardEvent(event) {
+    // console.log(this.state.x + " " + this.state.y);
     if (this.state.startEvent) {
       if (event.keyCode === 37) {
-        this.setState((prevState) => {
-          return { x: prevState.x - 5, y: prevState.y };
+        let tempX = this.state.x - 5;
+        let tempY = this.state.y;
+
+        this.setState(() => {
+          return { x: tempX, y: tempY };
         });
-        if (this.state.x === 255 && this.state.y === 250) {
+
+        if (tempX === 250 && tempY === 250) {
           clearInterval(this.id);
           this.setState({
             startEvent: false,
@@ -43,10 +48,14 @@ class Timer extends React.Component {
           return;
         }
       } else if (event.keyCode === 38) {
-        this.setState((prevState) => {
-          return { x: prevState.x, y: prevState.y - 5 };
+        let tempX = this.state.x;
+        let tempY = this.state.y - 5;
+
+        this.setState(() => {
+          return { x: tempX, y: tempY };
         });
-        if (this.state.x === 255 && this.state.y === 250) {
+
+        if (tempX === 255 && tempY === 250) {
           clearInterval(this.id);
           this.setState({
             startEvent: false,
@@ -55,11 +64,13 @@ class Timer extends React.Component {
           return;
         }
       } else if (event.keyCode === 39) {
-        this.setState((prevState) => {
-          return { x: prevState.x + 5, y: prevState.y };
+        let tempX = this.state.x + 5;
+        let tempY = this.state.y;
+        this.setState(() => {
+          return { x: tempX, y: tempY };
         });
 
-        if (this.state.x === 255 && this.state.y === 250) {
+        if (tempX === 250 && tempY === 250) {
           clearInterval(this.id);
           this.setState({
             startEvent: false,
@@ -68,11 +79,13 @@ class Timer extends React.Component {
           return;
         }
       } else if (event.keyCode === 40) {
-        this.setState((prevState) => {
-          return { x: prevState.x, y: prevState.y + 5 };
+        let tempX = this.state.x;
+        let tempY = this.state.y + 5;
+        this.setState(() => {
+          return { x: tempX, y: tempY };
         });
 
-        if (this.state.x === 255 && this.state.y === 250) {
+        if (tempX === 250 && tempY === 250) {
           clearInterval(this.id);
           this.setState({
             startEvent: false,
