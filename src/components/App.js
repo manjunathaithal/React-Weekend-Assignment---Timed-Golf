@@ -47,7 +47,7 @@ class Timer extends React.Component {
         this.setState((prevState) => {
           return { x: prevState.x, y: prevState.y - 5 };
         });
-        if (this.state.x === 250 && this.state.y === 250) {
+        if (this.state.x === 255 && this.state.y === 250) {
           clearInterval(this.id);
           this.setState({
             startEvent: false,
@@ -61,7 +61,7 @@ class Timer extends React.Component {
           return { x: prevState.x + 5, y: prevState.y };
         });
 
-        if (this.state.x === 250 && this.state.y === 250) {
+        if (this.state.x === 255 && this.state.y === 250) {
           clearInterval(this.id);
           this.setState({
             startEvent: false,
@@ -75,7 +75,7 @@ class Timer extends React.Component {
           return { x: prevState.x, y: prevState.y + 5 };
         });
 
-        if (this.state.x === 250 && this.state.y === 250) {
+        if (this.state.x === 255 && this.state.y === 250) {
           clearInterval(this.id);
           this.setState({
             startEvent: false,
